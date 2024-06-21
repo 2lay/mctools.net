@@ -1,7 +1,8 @@
 {
-  "name": "nuxt-app",
+  "name": "mctools.net",
   "private": true,
   "type": "module",
+  "description": "A website that offers essential tools altered for Minecraft Java server admins.",
   "scripts": {
     "build": "nuxt build",
     "dev": "nuxt dev",
@@ -15,5 +16,19 @@
     "nuxt": "^3.12.2",
     "vue": "^3.4.29",
     "vue-router": "^4.3.3"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/2lay/mctools.net"
+  },
+  "license": "MIT",
+  "author": {
+    "name": "Ashley (2lay)",
+    "email": "mail@2lay.net",
+    "url": "https://2lay.net"
+  },
+  "bugs": {
+    "url": "https://github.com/2lay/mctools.net/issues"
+  },
+  "homepage": "https://mctools.net"
 }
