@@ -1,7 +1,7 @@
 <template>
 	<div class="nav">
 		<a class="title">
-			<MdiIcon icon="mdiMinecraft" /> <span class="text">McTools.net</span>
+			<svg-icon type="mdi" :path="path"></svg-icon> <span class="text">McTools.net</span>
 		</a>
 		<div class="nav-links">
 			<nuxt-link to="/" class="nav-hover active">home</nuxt-link>
@@ -12,10 +12,29 @@
 	</div>
 	<div class="main-content">
 		<main>
-			<NuxtPage  />
+			<NuxtPage />
 		</main>
 	</div>
 </template>
+
+<script>
+import SvgIcon from '@jamescoyle/vue-icon';
+import { mdiMinecraft } from '@mdi/js';
+
+export default {
+	name: "my-component",
+	components: {
+		SvgIcon
+	},
+	data() {
+		return {
+			path: mdiMinecraft,
+		}
+	}
+}
+</script>
+
+
 <style>
 /* imports */
 @import url('https://meyerweb.com/eric/tools/css/reset/reset.css');
@@ -35,9 +54,19 @@
 	--danger-s: 100%;
 	--danger-l: 64%;
 
+	--warning-h: 30;
+	--warning-s: 100%;
+	--warning-l: 64%;
+
+	--success-h: 145;
+	--success-s: 78%;
+	--success-l: 48%;
+
 	--primary: hsl(var(--primary-h), var(--primary-s), var(--primary-l));
 	--secondary: hsl(var(--secondary-h), var(--secondary-s), var(--secondary-l));
 	--danger: hsl(var(--danger-h), var(--danger-s), var(--danger-l));
+	--warning: hsl(var(--warning-h), var(--warning-s), var(--warning-l));
+	--success: hsl(var(--success-h), var(--success-s), var(--success-l));
 
 	--border: hsla(0, 0%, 31%, 1);
 	--card: hsla(0, 0%, 0%, 0.7);
@@ -115,6 +144,8 @@ strong {
 .nav .title {
 	font-weight: 900 !important;
 	color: #ffffff !important;
+	display: flex;
+	align-items: center;
 }
 
 .nav-hover:hover {
@@ -128,30 +159,7 @@ strong {
 }
 
 /* colors */
-.primary,
-.danger {
-	box-shadow: 0px 0px 10px var(--card);
-}
 
-.primary {
-	background-color: var(--primary);
-}
-
-.danger {
-	background-color: var(--danger);
-}
-
-.primary:hover,
-.danger:hover {
-	box-shadow: 0px 0px 10px hsl(var(--primary-h), var(--primary-s), calc(var(--primary-l) + 3%));
-	background-color: hsl(var(--primary-h), var(--primary-s), calc(var(--primary-l) + 3%));
-}
-
-.primary:active,
-.danger:active {
-	box-shadow: 0px 0px 10px hsl(var(--primary-h), var(--primary-s), calc(var(--primary-l) - 3%));
-	background-color: hsl(var(--primary-h), var(--primary-s), calc(var(--primary-l) - 3%));
-}
 
 /* containers */
 .flex {
@@ -216,41 +224,5 @@ main * {
 	.hide-mobile {
 		display: none !important;
 	}
-}
-
-/* styles */
-button,
-textarea {
-	border-radius: 9px;
-	font-size: 16px;
-	transition: background-color 0.2s, transform 0.05s, box-shadow 0.1s, border 0.2s;
-	outline: none;
-}
-
-button {
-	border: none;
-	color: white;
-	padding: 5px 15px;
-	border-radius: 9px;
-	text-align: center;
-	text-decoration: none;
-	display: inline-block;
-	font-size: 18px;
-	transition: background-color 0.2s, transform 0.05s, box-shadow 0.1s;
-}
-
-button:active {
-	transform: scale(0.95);
-}
-
-textarea {
-	border: 1px solid #252529;
-	color: white;
-	background-color: #161618;
-	padding: 5px 15px;
-}
-
-textarea:focus {
-	border-color: var(--primary);
 }
 </style>

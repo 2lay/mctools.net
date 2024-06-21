@@ -6,11 +6,19 @@
         </h2>
         <br>
         <div style="display: flex; justify-content: center;">
-            <button type="button" class="primary" style="margin-bottom: 15px;">
-                <span >
-                    <LucideRocket />
-                </span> Source code
-            </button>
+            <NuxtLink to="https://github.com/2lay/mctools.net">
+                <mct-button icon-name="mdiGithub" label="Source code" class="mct-button-primary"></mct-button>
+            </NuxtLink>
         </div>
     </div>
 </template>
+
+<script>
+import MctButton from '../components/MctButton.vue';
+
+export default {
+    components: {
+        MctButton
+    }
+}
+</script>
