@@ -75,7 +75,7 @@ export default {
 
 /* base */
 body {
-	background: #1f1f1f url('/noise.png');
+	background: #1b1b1b url('/noise.png');
 	box-sizing: border-box;
 	pointer-events: none;
 }
