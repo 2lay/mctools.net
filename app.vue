@@ -1,20 +1,21 @@
 <template>
 	<div class="nav">
-		<a class="title">McTools.net</a>
-		<a class="nav-hover active" href="#home">home</a>
-		<a class="nav-hover" href="#home">home</a>
-		<a class="nav-hover" href="#home">home</a>
-		<a class="nav-hover" href="#home">home</a>
-	</div>
-	<div style="display: contents">
-		<div class="h-screen flex sm:flex-row sm:justify-center overflow-y-auto">
-			<main style="margin-top:auto;margin-bottom:auto">
-				<NuxtPage :key="$route.fullPath" />
-			</main>
+		<a class="title">
+			<MdiIcon icon="mdiMinecraft" /> <span class="text">McTools.net</span>
+		</a>
+		<div class="nav-links">
+			<nuxt-link to="/" class="nav-hover active">home</nuxt-link>
+			<nuxt-link to="tools" class="nav-hover">tools</nuxt-link>
+			<nuxt-link to="contact" class="nav-hover">contact</nuxt-link>
 		</div>
+
+	</div>
+	<div class="main-content">
+		<main>
+			<NuxtPage  />
+		</main>
 	</div>
 </template>
-
 <style>
 /* imports */
 @import url('https://meyerweb.com/eric/tools/css/reset/reset.css');
@@ -85,31 +86,35 @@ a {
 
 a,
 .nav a {
+	display: inline-flex;
 	font-size: 1rem !important;
 	font-weight: 100 !important;
 	color: #e1e1e1;
 	text-decoration: none;
 }
 
-
+strong {
+	font-weight: 900 !important;
+}
 
 /* navigation */
-.topnav,
 .nav {
 	overflow: hidden;
+	display: flex;
+	justify-content: space-between;
+	padding: 0.2rem;
 }
 
 .nav a {
-	float: left;
-	color: #f2f2f2;
-	text-align: center;
-	padding: 14px 16px;
-	font-size: 17px;
+	color: #929292;
+	padding: 16px 16px;
 	transition: 0.3s;
+
 }
 
 .nav .title {
 	font-weight: 900 !important;
+	color: #ffffff !important;
 }
 
 .nav-hover:hover {
@@ -170,7 +175,7 @@ main * {
 /* mobile */
 @media (min-width: 940px) {
 	main {
-		max-width: 800px;
+		max-width: 1200px;
 	}
 
 	h1 {
