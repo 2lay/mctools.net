@@ -1,5 +1,5 @@
 <template>
-  <textarea :placeholder="taPlaceholder" :name="taName" :cols="taCols" :rows="taRows" v-model="text"></textarea>
+  <textarea :placeholder="taPlaceholder" :name="taName" :cols="taCols" :rows="taRows" v-model="text" @keypress="handleKeyPress"></textarea>
 </template>
 
 <script>
@@ -10,29 +10,48 @@ export default {
       type: String,
       required: true
     },
-    taCols: {
+    taText: {
       type: String,
+      required: true
+    },
+    taCols: {
+      type: Number,
       required: true
     },
     taRows: {
-      type: String,
-      required: true
-    },
-    taText: {
-      type: String,
+      type: Number,
       required: true
     },
     taPlaceholder: {
       type: String,
       required: true
     },
+    taHardLimit: {
+      type: Boolean,
+      required: false,
+      default: false
+    },
   },
   data() {
     return {
-      text: this.taText  // init the text prop
+      text: this.taText, 
+      maxRows: this.taHardLimit ? this.taRows : undefined
+
     };
+  },
+  methods: {
+    handleKeyPress(event) {
+      if (event.which === 13) {
+        let numberOfLines = this.text.split('\n').length;
+        if (numberOfLines >= this.maxRows) {
+          event.preventDefault();
+        }
+      }
+    }
   }
 }
+
+
 </script>
 
 <style scoped>
@@ -49,6 +68,7 @@ textarea {
   color: white;
   background-color: #161618;
   padding: 5px 15px;
+  resize: none;
 }
 
 textarea:focus {

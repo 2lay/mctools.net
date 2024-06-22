@@ -29,16 +29,25 @@
 
     <!-- text area with predefined text, also use ' taText="asd" ' -->
     <mct-text-area taName="Meow" taPlaceholder="Example placeholder text" taCols="30" taRows="5"></mct-text-area>
+
+
+    <!-- card component -->
+    <br><br>
+    <p>Card:</p>
+    <br>
+    <mct-card cardMW="800px"><h1>Example text</h1></mct-card>
   </div>
 </template>
 
 <script>
 import MctButton from '../components/MctButton.vue';
 import MctTextArea from '../components/MctTextArea.vue';
+import MctCard from '../components/MctCard.vue';
 export default {
   components: {
     MctButton,
-    MctTextArea
+    MctTextArea,
+    MctCard
   }
 }
 </script>
