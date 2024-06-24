@@ -5,7 +5,7 @@
 		</a>
 		<div class="nav-links">
 			<nuxt-link to="/" class="nav" exact-active-class="active">home</nuxt-link>
-			<nuxt-link to="/tools" class="nav" exact-active-class="active">tools</nuxt-link>
+			<nuxt-link href="/tools" :class="{'nav active': toolsPath, 'nav': !toolsPath}">tools</nuxt-link>
 			<nuxt-link to="/contact" class="nav" exact-active-class="active">contact</nuxt-link>
 		</div>
 	</div>
@@ -29,6 +29,11 @@ export default {
 	data() {
 		return {
 			path: mdiMinecraft,
+		}
+	},
+	computed: {
+		toolsPath() {
+			return this.$route.path.startsWith('/tools')
 		}
 	}
 }
