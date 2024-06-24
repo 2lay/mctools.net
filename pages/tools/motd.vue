@@ -1,6 +1,4 @@
 <template>
-	<div>
-		<br>
 		<mct-card cardMW="800px">
 			<h1 style="text-align: center; margin-bottom: 15px;">MOTD Creator</h1>
 			<div style="text-align: center;">
@@ -50,7 +48,6 @@
 				</div>
 			</div>
 		</mct-card>
-	</div>
 </template>
 
 <script>

@@ -9,18 +9,16 @@
 			<nuxt-link to="/contact" class="nav" exact-active-class="active">contact</nuxt-link>
 		</div>
 	</div>
-	<div class="error-card">
-		<mct-card cardMW="300px" class="card">
-			<div style="text-align: center;">
-				<h1>404</h1>
-				<hr>
-				<p style="margin-top: 10px;">This page doesn't exist</p>
-				<Nuxt-Link href="/">
-					<mct-button style="margin-top: 15px;" icon-name="mdiHome" label="Home" class="mct-button-primary" />
-				</Nuxt-Link>
-			</div>
-		</mct-card>
-	</div>
+	<mct-card cardMW="300px" class="card">
+		<div style="text-align: center;">
+			<h1>404</h1>
+			<hr>
+			<p style="margin-top: 10px;">This page doesn't exist</p>
+			<Nuxt-Link href="/">
+				<mct-button style="margin-top: 15px;" icon-name="mdiHome" label="Home" class="mct-button-primary" />
+			</Nuxt-Link>
+		</div>
+	</mct-card>
 </template>
 
 <script>
