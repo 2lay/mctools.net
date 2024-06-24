@@ -148,13 +148,14 @@ strong {
 	align-items: center;
 }
 
-.nav:hover {
+.nav a:hover {
 	color: hsl(var(--primary-h), var(--primary-s), calc(var(--primary-l) + 15%)) !important;
+	text-shadow: 0px 0px 10px hsl(var(--primary-h), var(--primary-s), calc(var(--primary-l) + 15%)) !important;
 }
 
-.nav a.active,
-.nav-link.active {
+.nav a.active {
 	color: var(--primary);
+	text-shadow: 0px 0px 10px hsl(var(--primary-h), var(--primary-s), calc(var(--primary-l) - 5%));
 }
 
 /* containers */
