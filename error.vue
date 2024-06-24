@@ -10,7 +10,7 @@
 		</div>
 	</div>
 	<div class="error-card">
-		<mct-card cardMW="300px">
+		<mct-card cardMW="300px" class="card">
 			<div style="text-align: center;">
 				<h1>404</h1>
 				<hr>
@@ -38,12 +38,3 @@ export default {
 	}
 }
 </script>
-
-<style scoped>
-.error-card {
-	position: absolute;
-	left: 50%;
-	top: 50%;
-	transform: translate(-50%, -50%);
-}
-</style>
