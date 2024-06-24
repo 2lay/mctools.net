@@ -22,7 +22,6 @@ import SvgIcon from '@jamescoyle/vue-icon';
 import { mdiMinecraft } from '@mdi/js';
 
 export default {
-	name: "my-component",
 	components: {
 		SvgIcon
 	},
@@ -85,6 +84,10 @@ body {
 	pointer-events: none;
 }
 
+hr {
+	border: 0.3px solid #252529;
+}
+
 body * {
 	pointer-events: auto;
 }
@@ -125,6 +128,10 @@ a,
 	font-weight: 100 !important;
 	color: #e1e1e1;
 	text-decoration: none;
+}
+
+p {
+	color: #a4a4a4;
 }
 
 strong {
