@@ -4,11 +4,10 @@
 			<svg-icon type="mdi" :path="path"></svg-icon> <span class="text">McTools.net</span>
 		</a>
 		<div class="nav-links">
-			<nuxt-link to="/" class="nav-hover active">home</nuxt-link>
-			<nuxt-link to="tools" class="nav-hover">tools</nuxt-link>
-			<nuxt-link to="contact" class="nav-hover">contact</nuxt-link>
+			<nuxt-link to="/" class="nav" exact-active-class="active">home</nuxt-link>
+			<nuxt-link to="/tools" class="nav" exact-active-class="active">tools</nuxt-link>
+			<nuxt-link to="/contact" class="nav" exact-active-class="active">contact</nuxt-link>
 		</div>
-
 	</div>
 	<div class="main-content">
 		<main>
@@ -16,6 +15,7 @@
 		</main>
 	</div>
 </template>
+
 
 <script>
 import SvgIcon from '@jamescoyle/vue-icon';
@@ -148,18 +148,14 @@ strong {
 	align-items: center;
 }
 
-.nav-hover:hover {
-	color: hsl(var(--primary-h), var(--primary-s), calc(var(--primary-l) + 15%));
+.nav:hover {
+	color: hsl(var(--primary-h), var(--primary-s), calc(var(--primary-l) + 15%)) !important;
 }
 
 .nav a.active,
 .nav-link.active {
 	color: var(--primary);
-
 }
-
-/* colors */
-
 
 /* containers */
 .flex {
