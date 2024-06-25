@@ -12,13 +12,3 @@
         </div>
     </mct-card>
 </template>
-
-<script>
-import MctButton from '../components/MctButton.vue';
-
-export default {
-    components: {
-        MctButton
-    }
-}
-</script>

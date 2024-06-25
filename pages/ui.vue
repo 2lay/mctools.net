@@ -38,16 +38,3 @@
     <mct-card cardMW="800px"><h1>Example text</h1></mct-card>
   </div>
 </template>
-
-<script>
-import MctButton from '../components/MctButton.vue';
-import MctTextArea from '../components/MctTextArea.vue';
-import MctCard from '../components/MctCard.vue';
-export default {
-  components: {
-    MctButton,
-    MctTextArea,
-    MctCard
-  }
-}
-</script>

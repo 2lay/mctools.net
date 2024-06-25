@@ -50,12 +50,6 @@
 		</mct-card>
 </template>
 
-<script>
-export default {
-	name: 'MOTDCreator',
-}
-</script>
-
 <style scoped>
 .motd-shared {
 	border: none;
