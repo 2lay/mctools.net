@@ -1,7 +1,7 @@
 <template>
-	<div>
-		<div>
-			<h1 style="margin-bottom: 15px;"># McTools.net</h1>
+	<mct-card cardMW="1200px" class="card">
+		<div style="text-align: center;">
+			<h1 style="margin-bottom: 15px;">McTools.net</h1>
 			<h2 style="margin-bottom: 35px;" class="bold">A website that offers essential tools altered for Minecraft
 				Java
 				server admins.
@@ -19,5 +19,5 @@
 				</NuxtLink>
 			</div>
 		</div>
-	</div>
+	</mct-card>
 </template>
