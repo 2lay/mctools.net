@@ -1,3 +1,6 @@
+### Development halted
+Project will be soon rewritten in Next.js
+
 # mctools.net 
 hey there! this is a simple website which featuers several neat tools for Minecraft. this website is built using vue, nuxt and my css!
 
